@@ -56,6 +56,7 @@ This file contains the list of available projects, complete details for each pro
 | 28 | [Egocentric Object-State Change Detection](#project-28) | Video Understanding | Medium | Ego4D | Marte |
 | 29 | [Feature‑based Knowledge Distillation for Monocular Depth Estimation](#project-29) | Knowledge Distillation | Small | KITTI, NYU Depth V2 | G22 |
 | 30 | [Unsupervised Domain Adaptation for Image Recognition under Domain Shift](#project-30) | Domain Adaptation | Small | Intel Scene Classification, Places | G31 |
+| 31 | [Metric Learning for Face Recognition](#project-31) | Metric Learning | Small | MS1MV2 | G35 |
 
 ## Detailed Project Descriptions
 
@@ -870,6 +871,31 @@ After measuring the degradation in accuracy, you will apply **unsupervised domai
 - Evaluate robustness under controlled perturbations (e.g., blur, noise, color shifts) to analyze which factors contribute most to domain shift.
 
   
+---
+
+<a id='project-31'></a>
+### Track 31: Metric Learning for Face Recognition
+**Suggested Size**: Small  
+**Reference Module**: Metric Learning  
+
+#### Problem Description
+Face recognition systems are ubiquitous, but identifying individuals accurately across varying lighting, poses, and expressions is challenging. This project involves learning robust, identity-preserving embeddings by training a model on a large face dataset and testing its generalization on unseen individuals. Split the dataset into a training set and a test set, where the test set contains only individuals that are not present in the training set.
+
+#### Dataset
+- **MS1M-ArcFace** (https://www.kaggle.com/datasets/yakhyokhuja/ms1m-arcface-dataset) or a subset
+- 1M images representing 85742 subjects.
+
+#### Minimum Objectives
+1. **Baseline**: Train a standard image classification model using a fine-tuned ResNet-18 backbone, relying on the classifier's features and a K-Nearest Neighbors (KNN) search to generalize to new faces.
+2. **Metric Learning**: Implement Triplet Loss with hard negative mining. Given an anchor face, dynamically mine challenging positives (same person) and negatives (different people).
+3. **Retrieval Evaluation**: Compute mAP @1, 5, 10 to evaluate if the model successfully retrieves the correct identity within its top rank predictions.
+4. **Cluster Analysis**: Perform an analysis of the latent space (e.g., using t-SNE or PCA) to verify that faces of identical subjects cluster closely together.
+
+#### Extra Objectives
+- Implement and compare with advanced margin-based loss functions (e.g., ArcFace, CosFace, Siamese networks).
+- Perform ablations on hyper-parameters like mining strategies (offline vs. online) and batch size.
+- Create a small demo that processes and recognizes localized facial images collected directly by your team.
+
 ---
 
 ## Groups
