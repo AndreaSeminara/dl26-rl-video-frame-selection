@@ -1,16 +1,11 @@
-> **NOTE: This file is the official template for the technical README of your repository.**  
-> Before starting, make sure you have carefully read the **[INSTRUCTIONS.md](INSTRUCTIONS.md)**.  
-> This file must contain **exclusively the technical aspects** of the project (Setup, Run, baseline Results). The textual and theoretical report should be placed in the **[`docs/REPORT.md`](docs/REPORT.md)** file.
-> *Delete this note block before submission.*
-
-# [Assigned Project Title]
+# Deep Reinforcement Learning for Frame Selection in Video
 
 [![Report](https://img.shields.io/badge/Paper-REPORT.md-blue)](docs/REPORT.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## 👥 Group and Project Information
-- **Group ID**: [E.g., G07]
-- **Project ID**: [E.g., 1]
+- **Group ID**: G38
+- **Project ID**: 21
 
 ## 📝 Project Description
 A brief paragraph (3-4 lines) that visually and concisely describes the project, the main implemented model, and the task addressed. 
